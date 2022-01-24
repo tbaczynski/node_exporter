@@ -19,6 +19,7 @@ prometheus_node_exporter_listen_port: '9100'
 prometheus_node_exporter_listen_ip: ''
 prometheus_node_exporter_version: '0.17.0'
 prometheus_node_exporter_validate_certs: true
+prometheus_node_exporter_startup_args: ' --web.listen-address {{ prometheus_node_exporter_listen }} --collector.ntp.server=127.0.0.1 --collector.ntp --collector.systemd --log.level={{ prometheus_node_exporter_loglevel }} --collector.filesystem.ignored-fs-types=\"^(sys|proc|auto|tmp|ns|squash)fs|overlay$\"'
 
 enable_ufw: false
 prometheus_node_exporter_src_access:
