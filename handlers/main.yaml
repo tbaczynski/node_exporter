@@ -9,7 +9,7 @@
 
 - name: systemd reload
   systemd:
-    daemon_reload: yes
+    daemon_reload: true
   tags:
     - prometheus
     - node_exporter

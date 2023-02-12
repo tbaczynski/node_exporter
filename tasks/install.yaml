@@ -30,7 +30,7 @@
   user:
     name: "{{ prometheus_node_exporter_user }}"
     group: "{{ prometheus_node_exporter_group }}"
-    createhome: no
+    createhome: false
     shell: /sbin/nologin
     comment: "Prometheus User"
     state: present
@@ -52,7 +52,7 @@
     dest: "{{ prometheus_node_exporter_install_path }}"
     owner: '{{ prometheus_node_exporter_user }}'
     group: '{{ prometheus_node_exporter_group }}'
-    copy: no
+    copy: false
     creates: '{{ prometheus_node_exporter_subdir }}'
     validate_certs: '{{ prometheus_node_exporter_validate_certs }}'
   notify:
