@@ -3,18 +3,13 @@ galaxy_info:
   author: Tomasz Baczynski
   description: Install and setup node_exporter agent service
   company: BulIT
-
   license: BSD
-
   min_ansible_version: '2.7'
-
+  standalone: true
   platforms:
     - name: Ubuntu
       versions:
-        - xenial
-        - bionic
-        - focal
-        - yammy
+        - all
     - name: Debian
       versions:
         - buster
@@ -22,10 +17,10 @@ galaxy_info:
         - jessie
         - wheezy
         - bullseye
-
   galaxy_tags:
     - system
     - prometheus
     - monitoring
 
 dependencies: []
+...
