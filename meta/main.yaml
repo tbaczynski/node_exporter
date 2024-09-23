@@ -5,7 +5,6 @@ galaxy_info:
   company: BulIT
   license: BSD
   min_ansible_version: '2.7'
-  standalone: true
   platforms:
     - name: Ubuntu
       versions:
