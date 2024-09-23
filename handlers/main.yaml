@@ -1,14 +1,14 @@
 ---
-- name: restart node_exporter
-  service:
+- name: Restart node_exporter
+  ansible.builtin.service:
     name: node_exporter
     state: restarted
   tags:
     - prometheus
     - node_exporter
 
-- name: systemd reload
-  systemd:
+- name: Systemd reload
+  ansible.builtin.systemd:
     daemon_reload: true
   tags:
     - prometheus
