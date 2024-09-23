@@ -21,6 +21,7 @@ galaxy_info:
         - stretch
         - jessie
         - wheezy
+        - bullseye
 
   galaxy_tags:
     - system
