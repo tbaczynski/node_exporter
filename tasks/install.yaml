@@ -61,7 +61,7 @@
     creates: '{{ prometheus_node_exporter_subdir }}'
     validate_certs: '{{ prometheus_node_exporter_validate_certs }}'
   notify:
-    - restart node_exporter
+    - Restart node_exporter
 
 - name: Copy node_exporter systemd profile
   ansible.builtin.template:
@@ -71,8 +71,8 @@
     group: root
     mode: '0644'
   notify:
-    - systemd reload
-    - restart node_exporter
+    - Systemd reload
+    - Restart node_exporter
   when: ansible_service_mgr == "systemd"
 
 - name: Copy node_exporter sysvinit profile
@@ -83,7 +83,7 @@
     group: root
     mode: '0755'
   notify:
-    - restart node_exporter
+    - Restart node_exporter
   when: ansible_service_mgr == "sysvinit"
 
 - name: Copy node_exporter config
@@ -94,7 +94,7 @@
     group: '{{ prometheus_node_exporter_group }}'
     mode: '0640'
   notify:
-    - restart node_exporter
+    - Restart node_exporter
 
 - name: Node_exporter service enable
   ansible.builtin.service:
